@@ -31,4 +31,4 @@ jobs:
           docker pull ${{ secrets.DOCKER_USERNAME }}/erp-backend
           docker stop erp || true
           docker rm erp || true
-          docker run -d -p 80:5000 --name erp ${{ secrets.DOCKER_USERNAME }}/erp-backend
+          docker run -d -p 80:5000 --name erp ${{ secrets.DOCKER_USERNAME }}/erp-backend 
