@@ -30,6 +30,7 @@ jobs:
         key: ${{ secrets.EC2_KEY }}
         script: |
           cd ~
-          docker pull savitrik/erp-backend:latest
+          docker pull ${{ secrets.DOCKER_USERNAME }}/erp-backend:latest
+          docker rm -f erp || true
           docker-compose down
           docker-compose up -d
